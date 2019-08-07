@@ -12,9 +12,13 @@ Or to specify a standard, you can run
 
 `docker run --rm -v /local/path:/project andymardell/wpcs --standard=WordPress-Core ./wp-content/themes/my-theme`
 
+## Automatically Fixing Errors
+
 To fix errors with phpcbf, you can use
 
 `docker run --entrypoint=phpcbf --rm -v /local/path:/project andymardell/wpcs ./wp-content/themes/my-theme`
+
+Bear in mind this doesn't fix all errors. You should run the audit again to check remaining errors.
 
 ## Relative paths
 
